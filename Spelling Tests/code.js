@@ -1,3 +1,4 @@
+//Variables
 i = 0;
 
 x = 0;
@@ -6,12 +7,18 @@ var answer = [];
 
 var check = [];
 
+const optionsModal = document.querySelector('.optionsModal');
+const openModal = document.querySelector('.open-button');
+const closeModal = document.querySelector('.closeOptions');
+
+//Start Test
 function enterWords(){
     var words = document.getElementById('words').value;
 
     localStorage.setItem('words', words);
 }
 
+//Test Window
 function startTest(){
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
@@ -26,6 +33,7 @@ function startTest(){
         var buttonAudio = document.createElement('button');
         buttonAudio.type = 'Submit';
         buttonAudio.id = wordArray[i];
+        buttonAudio.className = 'audio'
         buttonAudio.addEventListener('click', audio);
         buttonAudio.innerHTML = 'Audio';
         document.getElementById('testBox').appendChild(buttonAudio);
@@ -36,6 +44,7 @@ function startTest(){
     }
 }
 
+//Audio
 function audio(){
     if ('speechSynthesis' in window){
         var msg = new SpeechSynthesisUtterance();
@@ -46,6 +55,7 @@ function audio(){
        }
 }
 
+//Reset Test
 function reset(){
     i = 0;
 
@@ -74,7 +84,10 @@ function reset(){
     i = 0;
 }
 
+//Hand-in Test
 function test(){
+
+    //Error
     i = 0;
 
     if (x == 1){
@@ -105,6 +118,7 @@ function test(){
 
     i = 0;
 
+    //Checking Answers
     while(arrLength > i){
         if(answer[i] == wordArray[i]){
             check.push(true);
@@ -120,6 +134,7 @@ function test(){
 
     console.log(check);
 
+    //Reset Variables
     answer = [];
     wordArray = [];
     check = [];
@@ -130,3 +145,12 @@ function test(){
 
     console.log('------')
 }
+
+//Options Menu
+openModal.addEventListener('click', () => {
+    optionsModal.showModal();
+})
+
+closeModal.addEventListener('click', () => {
+    optionsModal.close();
+})

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <title>Spelling Test</title>
+        <link rel="stylesheet" href="test.css">
+
+        <link rel="icon" href="favicon.png">
+    </head>
+
+    <!-- Body -->
+    <body onload="startTest()" spellcheck="false">
+        <section id="testBox"></section>
+
+        <section id="buttons">
+            <input id="options" class="submit" type="submit" onclick="test()">
+            <button id="options" class="reset" type="submit" onclick="reset()">Reset</button>
+        </section>
+
+        <a id="redirect" href="index.html">
+            <input id="back" value="Back" type="button">
+        </a>
+    </body>
+
+    <script src="code.js"></script>
+</html>

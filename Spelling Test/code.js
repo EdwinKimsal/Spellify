@@ -1,8 +1,6 @@
 //Variables
 i = 0;
 
-x = 0;
-
 var answer = [];
 
 var check = [];
@@ -66,8 +64,6 @@ function audio(){
 function reset(){
     i = 0;
 
-    x = 0;
-
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
     var arrLength = wordArray.length;
@@ -89,21 +85,14 @@ function reset(){
     localStorage.setItem('check', check)
 
     i = 0;
+
+    //Change Button
+    document.getElementById('submit').style.display = 'block'
+    document.getElementById('reset').style.display = 'none'
 }
 
 //Hand-in Test
 function test(){
-
-    //Error
-    i = 0;
-
-    if (x == 1){
-        alert("Error: Please refresh the page or press the 'Reset' button.")
-    }
-
-    x = 1;
-
-
     //Prepare Variables
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
@@ -153,4 +142,8 @@ function test(){
     localStorage.setItem('check', check)
 
     console.log('------')
+
+    //Change Button
+    document.getElementById('submit').style.display = 'none'
+    document.getElementById('reset').style.display = 'block'
 }

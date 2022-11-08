@@ -1,3 +1,8 @@
+//To-do:
+//  1. Responsiveness
+//  2. Fix dublicates
+//  3. Options?
+
 //Variables
 i = 0;
 
@@ -94,6 +99,8 @@ function reset(){
 //Hand-in Test
 function test(){
     //Prepare Variables
+    i = 0
+
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
     var arrLength = wordArray.length;

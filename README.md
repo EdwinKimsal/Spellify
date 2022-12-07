@@ -1,4 +1,4 @@
-# Spelling-Test
+# Spellify
 A website where you can enter a list of words to practice spelling.
 
-Website: https://edwinkimsal-spellingtest.netlify.app/
+Website: https://spellify.netlify.app/

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <title>Spellify</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="icon" href="spellifyIcon.png">
+    </head>
+
+    <!-- Body -->
+    <body onload="wordStorage()">
+        <p id="text">Seperate all words with a comma and a space.<br>No duplicates!</p>
+
+        <textarea id="words" name="words" rows="4" cols="50"></textarea>
+
+        <section id="buttonArea">
+            <a id="redirect" href="test.html">
+                <input id="buttons" class="start"type="submit" value="Start" onclick="enterWords()">
+            </a>
+        </section>
+    </body>
+
+    <script src="code.js"></script>
+    
+</html>

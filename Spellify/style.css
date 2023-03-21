@@ -3,13 +3,10 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
     margin: .75vw;
-    padding: auto;
-
+    padding: none;
     border-radius: 0;
-    
-    font-size: 1.5rem;
+    font-size: clamp(3vh, 8rem, 2vw);
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-weight: normal;
@@ -25,15 +22,10 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
-
     width: 95%;
     height: 25vh;
-
     border: 1px solid black;
-
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
-
     resize: none;
 }
 
@@ -42,22 +34,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-wrap: wrap;
 }
 
 /* General Button Decoration */
 #buttons{
     width: fit-content;
-    padding: 1.5rem, 0;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     border: 0px;
-    font-size: 1.5rem;
+    margin: 0px;
 }
 
 #buttons:hover{
@@ -69,6 +57,6 @@
 .start{
     background-color: rgba(20, 130, 20, 1);
     color: white;
-
     margin: 0;
+    padding: .1em;
 }

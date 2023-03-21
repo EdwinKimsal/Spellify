@@ -10,16 +10,18 @@
 
     <!-- Body -->
     <body onload="startTest()" spellcheck="false">
+        <span id="banner">
+            <a id="redirect" href="index.html">
+                <input id="back" class='options' value="Back" type="button">
+            </a>
+        </span>
+
         <section id="testBox"></section>
 
         <section id="buttons">
             <input id="submit" class="options" type="submit" onclick="test()">
             <button id="reset" class="options" type="submit" onclick="reset()">Reset</button>
         </section>
-
-        <a id="redirect" href="index.html">
-            <input id="back" class='options' value="Back" type="button">
-        </a>
     </body>
 
     <script src="code.js"></script>

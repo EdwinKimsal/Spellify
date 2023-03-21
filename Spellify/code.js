@@ -1,14 +1,10 @@
 //Variables
-i = 0;
-
-var answer = [];
-
+var response = [];
 var check = [];
 
 const optionsModal = document.querySelector('.optionsModal');
 const openModal = document.querySelector('.open-button');
 const closeModal = document.querySelector('.closeOptions');
-
 
 //wordStorage
 function wordStorage(){
@@ -19,7 +15,6 @@ function wordStorage(){
 //Start Test
 function enterWords(){
     var words = document.getElementById('words').value;
-
     localStorage.setItem('words', words);
 }
 
@@ -27,9 +22,10 @@ function enterWords(){
 function startTest(){
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
+    var wordArray = wordArray.filter((item, index) => wordArray.indexOf(item) === index);
     var arrLength = wordArray.length;
 
-    while(arrLength > i){
+    for(let i=0; arrLength > i; i++){
         var inputText = document.createElement('input'); 
         inputText.type = "text";
         inputText.id = wordArray[i];
@@ -43,9 +39,7 @@ function startTest(){
         buttonAudio.innerHTML = 'Audio';
         document.getElementById('testBox').appendChild(buttonAudio);
 
-        i++;
-
-        console.log(inputText.id);
+        console.log(wordArray[i]);
     }
 }
 
@@ -62,29 +56,24 @@ function audio(){
 
 //Reset Test
 function reset(){
-    i = 0;
-
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
+    var wordArray = wordArray.filter((item, index) => wordArray.indexOf(item) === index);
     var arrLength = wordArray.length;
 
-    while(arrLength > i){
+    for(let i=0; arrLength > i; i++){
         document.getElementById(wordArray[i]).style.backgroundColor = 'white';
 
         document.getElementById(wordArray[i]).value = '';
-
-        i++;
     }
 
-    answer = [];
+    response = [];
     wordArray = [];
     check = [];
 
-    localStorage.setItem('answer', answer)
+    localStorage.setItem('response', response)
     localStorage.setItem('wordArray', wordArray)
     localStorage.setItem('check', check)
-
-    i = 0;
 
     //Change Button
     document.getElementById('submit').style.display = 'block'
@@ -94,52 +83,45 @@ function reset(){
 //Hand-in Test
 function test(){
     //Prepare Variables
-    i = 0
-
     var words = localStorage.getItem('words');
     var wordArray = words.split(', ');
+    var wordArray = wordArray.filter((item, index) => wordArray.indexOf(item) === index);
     var arrLength = wordArray.length;
 
     console.log(arrLength);
 
-    while(arrLength > i){
+    for(let i=0; arrLength > i; i++){
+        var newResponse = document.getElementById(wordArray[i]).value; 
 
-        var newAnswer = document.getElementById(wordArray[i]).value; 
-
-        answer.push(newAnswer);
-
-        i++;
+        response.push(newResponse);
+        console.log(newResponse)
     }
 
-    localStorage.setItem('answer', answer);
+    localStorage.setItem('response', response);
 
-    console.log(answer);
+    console.log(response);
     console.log(wordArray);
 
-    i = 0;
-
     //Checking Answers
-    while(arrLength > i){
-        if(answer[i] == wordArray[i]){
+    for(let i=0; arrLength > i; i++){
+        if(response[i] == wordArray[i]){
             check.push(true);
             document.getElementById(wordArray[i]).style.backgroundColor = 'rgba(0, 255, 32, 0.40)';
         }else{
             check.push(false);
-            document.getElementById(wordArray[i]).value = answer[i] + ' | Correct Answer: ' + wordArray[i];
+            document.getElementById(wordArray[i]).value = response[i] + ' | Correct Answer: ' + wordArray[i];
             document.getElementById(wordArray[i]).style.backgroundColor = 'rgba(255, 0, 32, 0.40)';
         }
-
-        i++;
     }
 
     console.log(check);
 
     //Reset Variables
-    answer = [];
+    response = [];
     wordArray = [];
     check = [];
 
-    localStorage.setItem('answer', answer)
+    localStorage.setItem('response', response)
     localStorage.setItem('wordArray', wordArray)
     localStorage.setItem('check', check)
 

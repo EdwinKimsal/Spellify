@@ -12,6 +12,18 @@
     font-weight: normal;
 }
 
+/* Settings Button */
+#settings{
+    position: absolute;
+    top: 0;
+    right: 0%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: .1em;
+    float: right;
+}
+
 /* Directions */
 #text{
     text-align: center;
@@ -38,7 +50,7 @@
 }
 
 /* General Button Decoration */
-#buttons{
+input[type='button']{
     width: fit-content;
     display: flex;
     align-items: center;
@@ -48,15 +60,77 @@
     margin: 0px;
 }
 
-#buttons:hover{
+input[type='button']:hover{
     cursor: pointer;
 }
 
-
 /* Start Button */
-.start{
+#start{
     background-color: rgba(20, 130, 20, 1);
     color: white;
     margin: 0;
+    padding: .1em;
+}
+
+/* Home Button */
+#home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: .1em;
+    float: none;
+}
+
+/* Auto-Generated Items */
+input[type=text]{
+    width: 70%;
+}
+
+input[type=button]:hover{
+    cursor: pointer;
+}
+
+.audio{
+    width: fit-content;
+    border-color:rgba(0, 120, 255, 1);
+    background-color: rgba(0, 120, 255, 1);
+    color: white;
+    border: 0px;
+    padding: .1em;
+}
+
+/* Button Area */
+#testBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Submit/Restart Holder */
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 0px;
+}
+
+/* Submit Button */
+#submit{
+    display: block;
+    background-color: rgba(20, 130, 20, 1);
+    color: white;
+    padding: .1em;
+}
+
+/* Reset Button */
+#reset{
+    display: none;
+    background-color: rgba(255, 100, 0, 1);
+    color: white;
     padding: .1em;
 }

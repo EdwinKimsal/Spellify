@@ -3,7 +3,7 @@
     <!-- Head -->
     <head>
         <title>Spellify</title>
-        <link rel="stylesheet" href="test.css">
+        <link rel="stylesheet" href="style.css">
 
         <link rel="icon" href="spellifyIcon.png">
     </head>
@@ -12,15 +12,15 @@
     <body onload="startTest()" spellcheck="false">
         <span id="banner">
             <a id="redirect" href="index.html">
-                <input id="back" class='options' value="Back" type="button">
+                <input id="home" value="Home" type="button">
             </a>
         </span>
 
         <section id="testBox"></section>
 
         <section id="buttons">
-            <input id="submit" class="options" type="submit" onclick="test()">
-            <button id="reset" class="options" type="submit" onclick="reset()">Reset</button>
+            <input id="submit" value="Submit" type="button" onclick="test()">
+            <input id="reset" value="Restart" type="button" onclick="reset()">
         </section>
     </body>
 

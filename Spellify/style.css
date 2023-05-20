@@ -24,6 +24,11 @@
     float: right;
 }
 
+/* Label Margin */
+label{
+    margin: 0px;
+}
+
 /* Directions */
 #text{
     text-align: center;

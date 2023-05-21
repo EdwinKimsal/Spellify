@@ -11,22 +11,20 @@
     </head>
 
     <!-- Body -->
-    <body onload="startTest()" spellcheck="false">
+    <body onload="wordStorage()">
         <span id="banner">
             <a id="redirect" href="index.html">
                 <input id="about" value="About" type="button">
             </a>
-
-            <a id="redirect" href="main.html">
-                <input id="home" value="Home" type="button">
-            </a>
         </span>
+        
+        <label><p id="text">Separate all words with a comma and a space.<br>No duplicates!</p>
+        <textarea id="words" name="words" rows="4" cols="50"></textarea></label>
 
-        <section id="testBox"></section>
-
-        <section id="buttons">
-            <input id="submit" value="Submit" type="button" onclick="test()">
-            <input id="reset" value="Restart" type="button" onclick="reset()">
+        <section id="buttonArea">
+            <a id="redirect" href="test.html">
+                <input id="start" value="Start" type="button" onclick="enterWords()">
+            </a>
         </section>
     </body>
 

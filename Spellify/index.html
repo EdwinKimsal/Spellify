@@ -7,17 +7,53 @@
         <link rel="icon" href="spellifyIcon.png">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="A website to study spelling.">
+        <meta name="description" content="Spellify: A website to study spelling online">
     </head>
 
     <!-- Body -->
-    <body onload="wordStorage()">
-        <label><h1 id="text">Separate all words with a comma and a space.<br>No duplicates!</h1>
-        <textarea id="words" name="words" rows="4" cols="50"></textarea></label>
+    <body>
+        <h1 id="title">Spellify: A website to study spelling online.</h1>
+
+        <br>
+
+        <section id="info">
+            <h2>Enter a custom word bank.</h2>
+            <p id="des">On the main page, enter your spelling words (seperated by a comma and a space) and press start.</p>
+        </section>
+
+        <br>
+
+        <section id="info">
+            <h2>Save the spelling words for later.</h2>
+            <p id="des">Once you enter your spelling words and press start, the words will be stored on your device for later use.</p>
+        </section>
+
+        <br>
+
+        <section id="info">
+            <h2>Test your knowledge.</h2>
+            <p id="des">Press the audio button and practice your spelling skills. Then press submit to see how you did.</p>
+        </section>
+
+        <br>
+
+        <section id="info">
+            <h2>See your improvements.</h2>
+            <p id="des">This website can help you efficently study spelling for a better grade on your next quiz or test.</p>
+        </section>
+
+        <br>
+
+        <section id="info">
+            <h2>Check out the code.</h2>
+            <p id="des">View the<a id="github" href="https://github.com/EdwinKimsal/Spellify" target="_blank">Github Respotory</a>for this website.</p>
+        </section>
+
+        <br>
 
         <section id="buttonArea">
-            <a id="redirect" href="test.html">
-                <input id="start" value="Start" type="button" onclick="enterWords()">
+            <a id="redirect" href="main.html">
+                <input id="start" value="Start" type="button">
             </a>
         </section>
     </body>

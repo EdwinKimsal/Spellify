@@ -12,6 +12,36 @@
     font-weight: normal;
 }
 
+/* Title Style */
+#title{
+    width: 100%;
+    font-size: clamp(3vh, 8rem, 2vw);
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h2{
+    font-weight: 550;
+    width: 100%;
+    text-align: center;
+}
+
+/* Info Styling */
+#des{
+    width: 100%;
+}
+
+/* Description Styling */
+
+/* Github Styling */
+#github{
+    color: black;
+    text-decoration: underline;
+}
+
 /* Settings Button */
 #settings{
     position: absolute;
@@ -77,11 +107,23 @@ input[type='button']:hover{
     padding: .1em;
 }
 
+/* About Button */
+#about{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: .1em;
+    float: none;
+}
+
 /* Home Button */
 #home{
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     margin: 0;
     background-color: black;
     color: white;

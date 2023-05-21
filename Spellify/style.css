@@ -27,6 +27,8 @@ h2{
     font-weight: 550;
     width: 100%;
     text-align: center;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 /* Info Styling */
